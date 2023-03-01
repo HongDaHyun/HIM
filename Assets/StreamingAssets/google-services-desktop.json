@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "868082087905",
+    "project_id": "hiim-57cd1",
+    "storage_bucket": "hiim-57cd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868082087905:android:e5b8330e031b9ac0c2c4a0",
+        "android_client_info": {
+          "package_name": "com.toptree.him"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868082087905-c8f480rlk03r0f92p8cb9jgp2ncl0rc2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.toptree.him",
+            "certificate_hash": "d31f6f6c4590d6d5b54b45113f625e0bae112d87"
+          }
+        },
+        {
+          "client_id": "868082087905-bhem7om5v3pnulob7fcitc0n8v7e9570.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU6b-JPZINeMB6HhJ6-0ToBAW43dwcToM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868082087905-4gmn7t4jbad8mvffn9ebim2kg5ogm229.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
