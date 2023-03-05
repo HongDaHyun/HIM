@@ -14,8 +14,10 @@ public class UIManager : Singleton<UIManager>
 [Serializable]
 public struct EmailLogin
 {
-    public GameObject emailPannel;
+    public GameObject emailPannel, emailCreatePannel;
     public InputField email, password;
+    public InputField c_email, c_password, c_passwordCheck, c_code;
+    public string code;
 }
 
 [Serializable]

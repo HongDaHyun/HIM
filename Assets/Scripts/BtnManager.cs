@@ -10,9 +10,36 @@ public class BtnManager : Singleton<BtnManager>
         UIManager.Instance.emailLogin.emailPannel.SetActive(true);
     }
 
+    public void EmailCreatePannel()
+    {
+        UIManager.Instance.emailLogin.emailCreatePannel.SetActive(true);
+        UIManager.Instance.emailLogin.c_email.enabled = true;
+        UIManager.Instance.emailLogin.c_password.enabled = true;
+        UIManager.Instance.emailLogin.c_passwordCheck.enabled = true;
+    }
+
+    public void EmailSenderBtn()
+    {
+        string c_email = UIManager.Instance.emailLogin.c_email.text;
+        string c_password = UIManager.Instance.emailLogin.c_password.text;
+        string c_passwordCheck = UIManager.Instance.emailLogin.c_passwordCheck.text;
+        if (c_email == "" || c_password == "" || c_passwordCheck == "" || c_password != c_passwordCheck)
+        {
+            return;
+        }
+
+        FirebaseAuthManager.Instance.EmailSender(UIManager.Instance.emailLogin.c_email.text);
+        UIManager.Instance.emailLogin.c_email.enabled = false;
+        UIManager.Instance.emailLogin.c_password.enabled = false;
+        UIManager.Instance.emailLogin.c_passwordCheck.enabled = false;
+    }
+
     public void EmailCreateAccountBtn()
     {
-        FirebaseAuthManager.Instance.EmailCreateAccount(UIManager.Instance.emailLogin.email.text, UIManager.Instance.emailLogin.password.text);
+        if (UIManager.Instance.emailLogin.c_code.text != UIManager.Instance.emailLogin.code || UIManager.Instance.emailLogin.c_code.text == "")
+            return;
+        FirebaseAuthManager.Instance.EmailCreateAccount(UIManager.Instance.emailLogin.c_email.text, UIManager.Instance.emailLogin.c_password.text);
+        UIManager.Instance.emailLogin.emailCreatePannel.SetActive(false);
     }
 
     public void EmailLoginBtn()

@@ -4,9 +4,11 @@ using UnityEngine;
 using Firebase.Extensions;
 using Firebase.Auth;
 using System;
+using System.Net;
+using System.Net.Mail;
+using System.Threading.Tasks;
 using Google;
 using Facebook.Unity;
-using System.Threading.Tasks;
 
 public class FirebaseAuthManager : Singleton<FirebaseAuthManager>
 {
@@ -80,6 +82,46 @@ public class FirebaseAuthManager : Singleton<FirebaseAuthManager>
             }
                 
         }
+    }
+
+    private string RandomCode(int length)
+    {
+        string codeChars = "0123456789ABCDEFGHIJKLNMOPQRSTUVWXYZ";
+
+        System.Text.StringBuilder sb = new System.Text.StringBuilder(length);
+        System.Random r = new System.Random();
+
+        for(int i = 0; i < length; i++)
+        {
+            int pos = r.Next(codeChars.Length);
+            char c = codeChars[pos];
+            sb.Append(c);
+        }
+        return sb.ToString();
+    }
+
+    public void EmailSender(string toEmail)
+    {
+        string code = RandomCode(6);
+        UIManager.Instance.emailLogin.code = code;
+        string fromMail = "hdh36115@gmail.com";
+        string fromPassword = "jbypyawxmsxfhpuy";
+
+        MailMessage message = new MailMessage();
+        message.From = new MailAddress(fromMail);
+        message.Subject = "Toptree 인증 코드";
+        message.To.Add(new MailAddress(toEmail));
+        message.Body = code; //"<html><body> test </body></html>";
+        message.IsBodyHtml = true;
+
+        var smtpClient = new SmtpClient("smtp.gmail.com")
+        {
+            Port = 587,
+            Credentials = new NetworkCredential(fromMail, fromPassword),
+            EnableSsl = true,
+        };
+
+        smtpClient.Send(message);
     }
 
     public void EmailCreateAccount(string email, string password)
