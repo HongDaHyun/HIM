@@ -24,7 +24,7 @@ MonoBehaviour:
   status: 1
   xfbml: 0
   frictionlessRequests: 1
-  androidKeystorePath: D:/user.keystore
+  androidKeystorePath: "C:/Users/min35/OneDrive/\uBC14\uD0D5 \uD654\uBA74/Privacy/user.keystore"
   iosURLSuffix: 
   appLinkSchemes:
   - list: []
