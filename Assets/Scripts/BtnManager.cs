@@ -62,4 +62,12 @@ public class BtnManager : Singleton<BtnManager>
     {
         FirebaseAuthManager.Instance.Logout();
     }
+
+    public void Tab(GameObject Object)
+    {
+        if(!Object.activeSelf)
+            Object.SetActive(true);
+        else
+            Object.SetActive(false);
+    }
 }
