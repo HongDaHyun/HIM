@@ -7977,7 +7977,7 @@ GameObject:
   - component: {fileID: 723752037}
   - component: {fileID: 723752036}
   m_Layer: 5
-  m_Name: Hobby
+  m_Name: Like
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8388,7 +8388,7 @@ GameObject:
   - component: {fileID: 831478756}
   - component: {fileID: 831478755}
   m_Layer: 5
-  m_Name: Profile1
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8626,7 +8626,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hobby
+  m_Text: Like
 --- !u!222 &854662865
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13958,7 +13958,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Profile
+  m_Text: Image
 --- !u!222 &1296182997
 CanvasRenderer:
   m_ObjectHideFlags: 0
