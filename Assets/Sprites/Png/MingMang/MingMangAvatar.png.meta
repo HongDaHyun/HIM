@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 26086eca0f9633d4a96341d0939ed039
+guid: 5205be4f36ffff94e8df7e9657018eb9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -135,15 +135,15 @@ TextureImporter:
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3d80bb493f7e4741b3f402a425e4f0b
-      internalID: 1478220979
+      spriteID: 6a2a8ce52c9ef8c4e9f0084d402a1e23
+      internalID: 116560318
       vertices: []
       indices: 
       edges: []
@@ -156,15 +156,36 @@ TextureImporter:
         y: 0
         width: 48
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93020f32dee50d94898344992fdb2e29
-      internalID: -1025804222
+      spriteID: b84184b41a82b8543a22bd5f711de157
+      internalID: -1232447770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MingMangAvatar_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05e46c55b3a6ae4ca45008c2de1fbb9
+      internalID: -1156808471
       vertices: []
       indices: 
       edges: []
@@ -180,8 +201,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MingMangAvatar_0: 1478220979
-      MingMangAvatar_1: -1025804222
+      MingMangAvatar_2: -1156808471
+      MingMangAvatar_0: 116560318
+      MingMangAvatar_1: -1232447770
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

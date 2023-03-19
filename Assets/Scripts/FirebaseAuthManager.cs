@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Firebase.Extensions;
 using Firebase.Auth;
 using System;
 using System.Net;
@@ -160,9 +159,7 @@ public class FirebaseAuthManager : Singleton<FirebaseAuthManager>
                 Debug.LogError("로그인 실패");
                 return;
             }
-
             FirebaseUser newUser = task.Result;
-            Debug.Log("로그인 완료");
         });
     }
 
@@ -188,36 +185,32 @@ public class FirebaseAuthManager : Singleton<FirebaseAuthManager>
             if (task.IsCanceled)
             {
                 Debug.Log("Google Login task.IsCanceled");
+                return;
             }
-            else if (task.IsFaulted)
+            if (task.IsFaulted)
             {
                 Debug.Log("Google Login task.IsFaulted");
+                return;
             }
-            else
+            credential = GoogleAuthProvider.GetCredential(task.Result.IdToken, null);
+            auth.SignInWithCredentialAsync(credential).ContinueWith(authTask =>
             {
-                credential = GoogleAuthProvider.GetCredential(task.Result.IdToken, null);
-                auth.SignInWithCredentialAsync(credential).ContinueWith(authTask =>
+                if (authTask.IsCanceled)
                 {
-                    if (authTask.IsCanceled)
-                    {
-                        signInCompleted.SetCanceled();
-                        Debug.Log("Google Login authTask.IsCanceled");
-                        return;
-                    }
-                    if (authTask.IsFaulted)
-                    {
-                        signInCompleted.SetException(authTask.Exception);
-                        Debug.Log("Google Login authTask.IsFaulted");
-                        return;
-                    }
-
-                    user = authTask.Result;
-                    UIManager.Instance.googleLogin.googlePannel.SetActive(true);
-                    UIManager.Instance.googleLogin.email.text = user.Email;
-                    UIManager.Instance.googleLogin.name.text = user.DisplayName;
+                    signInCompleted.SetCanceled();
+                    Debug.Log("Google Login authTask.IsCanceled");
                     return;
-                });
-            }
+                }
+                if (authTask.IsFaulted)
+                {
+                    signInCompleted.SetException(authTask.Exception);
+                    Debug.Log("Google Login authTask.IsFaulted");
+                    return;
+                }
+
+                user = authTask.Result;
+                UIManager.Instance.NamePannelActive();
+            });
         });
     }
 
@@ -267,9 +260,7 @@ public class FirebaseAuthManager : Singleton<FirebaseAuthManager>
             }
 
             user = task.Result;
-            UIManager.Instance.facebookLogin.facebookPannel.SetActive(true);
-            UIManager.Instance.facebookLogin.userId.text = userID;
-            UIManager.Instance.facebookLogin.name.text = user.DisplayName;
+            UIManager.Instance.NamePannelActive();
         });
     }
 

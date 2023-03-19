@@ -6,9 +6,23 @@ using System;
 
 public class UIManager : Singleton<UIManager>
 {
+    public LoginPannel loginPannel;
+    public GameObject namePannel;
     public EmailLogin emailLogin;
-    public GoogleLogin googleLogin;
-    public FacebookLogin facebookLogin;
+
+    public void NamePannelActive()
+    {
+        loginPannel.btnPannel.SetActive(false);
+        loginPannel.startBtn.SetActive(true);
+        loginPannel.loginPannel.SetActive(false);
+        namePannel.SetActive(true);
+    }
+}
+
+[Serializable]
+public struct LoginPannel
+{
+    public GameObject loginPannel, loginBtn, btnPannel, startBtn;
 }
 
 [Serializable]
@@ -18,18 +32,4 @@ public struct EmailLogin
     public InputField email, password;
     public InputField c_email, c_password, c_passwordCheck, c_code;
     public string code;
-}
-
-[Serializable]
-public struct GoogleLogin
-{
-    public GameObject googlePannel;
-    public Text email, name;
-}
-
-[Serializable]
-public struct FacebookLogin
-{
-    public GameObject facebookPannel;
-    public Text userId, name;
 }

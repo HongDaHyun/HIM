@@ -1,14 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BtnManager : Singleton<BtnManager>
 {
     #region Email Login
-    public void EmailPannel()
-    {
-        UIManager.Instance.emailLogin.emailPannel.SetActive(true);
-    }
 
     public void EmailCreatePannel()
     {
@@ -69,5 +66,11 @@ public class BtnManager : Singleton<BtnManager>
             Object.SetActive(true);
         else
             Object.SetActive(false);
+    }
+
+    public void NextTab(GameObject obj)
+    {
+        EventSystem.current.currentSelectedGameObject.SetActive(false);
+        obj.SetActive(true);
     }
 }
