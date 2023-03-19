@@ -109,7 +109,7 @@ public class FirebaseAuthManager : Singleton<FirebaseAuthManager>
 
         MailMessage message = new MailMessage();
         message.From = new MailAddress(fromMail);
-        message.Subject = "Toptree 인증 코드";
+        message.Subject = "HI'M(하이아임) 인증 코드";
         message.To.Add(new MailAddress(toEmail));
         message.Body = code; //"<html><body> test </body></html>";
         message.IsBodyHtml = true;
