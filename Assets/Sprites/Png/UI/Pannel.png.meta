@@ -145,11 +145,11 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 72
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 3, y: 10, z: 10, w: 18}
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 3, y: 2, z: 2, w: 17}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -164,13 +164,13 @@ TextureImporter:
       name: Pannel_1
       rect:
         serializedVersion: 2
-        x: 72
+        x: 64
         y: 0
-        width: 72
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 3, y: 10, z: 10, w: 18}
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 3, y: 2, z: 2, w: 17}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -185,13 +185,13 @@ TextureImporter:
       name: Pannel_2
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 0
-        width: 72
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 3, y: 10, z: 10, w: 18}
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 3, y: 2, z: 2, w: 17}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -206,13 +206,13 @@ TextureImporter:
       name: Pannel_3
       rect:
         serializedVersion: 2
-        x: 216
+        x: 192
         y: 0
-        width: 72
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 3, y: 10, z: 10, w: 18}
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 3, y: 2, z: 2, w: 17}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -227,13 +227,13 @@ TextureImporter:
       name: Pannel_4
       rect:
         serializedVersion: 2
-        x: 288
+        x: 256
         y: 0
-        width: 72
-        height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 3, y: 10, z: 10, w: 18}
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 3, y: 2, z: 2, w: 17}
       outline: []
       physicsShape: []
       tessellationDetail: 0

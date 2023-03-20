@@ -144,8 +144,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 39
-        width: 84
+        y: 0
+        width: 77
         height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -164,9 +164,9 @@ TextureImporter:
       name: Logo_1
       rect:
         serializedVersion: 2
-        x: 84
-        y: 39
-        width: 84
+        x: 77
+        y: 0
+        width: 77
         height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -185,9 +185,9 @@ TextureImporter:
       name: Logo_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 154
         y: 0
-        width: 84
+        width: 77
         height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -206,9 +206,9 @@ TextureImporter:
       name: Logo_3
       rect:
         serializedVersion: 2
-        x: 84
+        x: 231
         y: 0
-        width: 84
+        width: 77
         height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
