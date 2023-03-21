@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.IO;
 
 public class BtnManager : Singleton<BtnManager>
 {
@@ -72,5 +73,48 @@ public class BtnManager : Singleton<BtnManager>
     {
         EventSystem.current.currentSelectedGameObject.SetActive(false);
         obj.SetActive(true);
+    }
+
+    public void OnClickImgLoad()
+    {
+        NativeGallery.GetImageFromGallery((file) =>
+        {
+            FileInfo selected = new FileInfo(file);
+
+            //용량 제한 (50000000Byte -> 50MB)
+            if (selected.Length > 50000000)
+            {
+                UIManager.Instance.contentPannel.imgPannel.img.gameObject.SetActive(false);
+                return;
+            }
+            if (string.IsNullOrEmpty(file)) //파일 없으면 리턴
+            {
+                UIManager.Instance.contentPannel.imgPannel.img.gameObject.SetActive(false);
+                return;
+            }
+
+            UIManager.Instance.contentPannel.imgPannel.img.gameObject.SetActive(true);
+            StartCoroutine(UIManager.Instance.LoadImg(file));
+        });
+    }
+
+    public void PopImg(RectTransform trans)
+    {
+        SetLastSibling(trans);
+        StartCoroutine(UIManager.Instance.ScaleUp(trans, 2f));
+    }
+
+    public void ScrollLock()
+    {
+        if (UIManager.Instance.contentPannel.scrollRect.enabled)
+            UIManager.Instance.contentPannel.scrollRect.enabled = false;
+        else
+            UIManager.Instance.contentPannel.scrollRect.enabled = true;
+    }
+
+    public void SetLastSibling(RectTransform rect)
+    {
+        rect.SetAsLastSibling();
+        Debug.Log("클릭");
     }
 }
