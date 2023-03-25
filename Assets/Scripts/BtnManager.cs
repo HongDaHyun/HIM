@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using System.IO;
 
 public class BtnManager : Singleton<BtnManager>
 {
@@ -75,33 +74,17 @@ public class BtnManager : Singleton<BtnManager>
         obj.SetActive(true);
     }
 
-    public void OnClickImgLoad()
+    public void PopPannel(Pannel pannel)
     {
-        NativeGallery.GetImageFromGallery((file) =>
-        {
-            FileInfo selected = new FileInfo(file);
-
-            //용량 제한 (50000000Byte -> 50MB)
-            if (selected.Length > 50000000)
-            {
-                UIManager.Instance.contentPannel.imgPannel.img.gameObject.SetActive(false);
-                return;
-            }
-            if (string.IsNullOrEmpty(file)) //파일 없으면 리턴
-            {
-                UIManager.Instance.contentPannel.imgPannel.img.gameObject.SetActive(false);
-                return;
-            }
-
-            UIManager.Instance.contentPannel.imgPannel.img.gameObject.SetActive(true);
-            StartCoroutine(UIManager.Instance.LoadImg(file));
-        });
+        SetLastSibling(pannel);
+        pannel.SetParent(UIManager.Instance.wallPaper);
+        StartCoroutine(pannel.ScaleUp(new Vector2(UIManager.Instance.screenWidth - 100, UIManager.Instance.screenHeight - 560)));
     }
 
-    public void PopImg(RectTransform trans)
+    public void DePopPannel(Pannel pannel)
     {
-        SetLastSibling(trans);
-        StartCoroutine(UIManager.Instance.ScaleUp(trans, 2f));
+        pannel.SetParent(UIManager.Instance.contentPannel.pannel);
+        StartCoroutine(pannel.ScaleDown(pannel.size));
     }
 
     public void ScrollLock()
@@ -112,9 +95,8 @@ public class BtnManager : Singleton<BtnManager>
             UIManager.Instance.contentPannel.scrollRect.enabled = true;
     }
 
-    public void SetLastSibling(RectTransform rect)
+    public void SetLastSibling(Pannel pannel)
     {
-        rect.SetAsLastSibling();
-        Debug.Log("클릭");
+        pannel.SetLastSibling();
     }
 }
