@@ -74,17 +74,15 @@ public class BtnManager : Singleton<BtnManager>
         obj.SetActive(true);
     }
 
-    public void PopPannel(Pannel pannel)
+    public void SelectPannel(Pannel pannel)
     {
-        SetLastSibling(pannel);
-        pannel.SetParent(UIManager.Instance.wallPaper);
-        StartCoroutine(pannel.ScaleUp(new Vector2(UIManager.Instance.screenWidth - 100, UIManager.Instance.screenHeight - 560)));
+        UIManager.Instance.selectPannel = pannel;
+        UIManager.Instance.SetPopUp();
     }
 
-    public void DePopPannel(Pannel pannel)
+    public void EditBtn()
     {
-        pannel.SetParent(UIManager.Instance.contentPannel.pannel);
-        StartCoroutine(pannel.ScaleDown(pannel.size));
+        UIManager.Instance.selectPannel.EditMode();
     }
 
     public void ScrollLock()
@@ -95,8 +93,8 @@ public class BtnManager : Singleton<BtnManager>
             UIManager.Instance.contentPannel.scrollRect.enabled = true;
     }
 
-    public void SetLastSibling(Pannel pannel)
+    public void SetLastSibling(RectTransform rect)
     {
-        pannel.SetLastSibling();
+        rect.SetAsLastSibling();
     }
 }

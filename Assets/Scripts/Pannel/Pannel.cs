@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
+public enum PannelState { Small, Edit }
 
 public abstract class Pannel : MonoBehaviour
 {
     public Vector2 size;
     public RectTransform contentRect;
+    public PannelState pannelState = PannelState.Small;
     RectTransform rect;
 
     private void Awake()
@@ -19,14 +21,21 @@ public abstract class Pannel : MonoBehaviour
         size = rect.sizeDelta;
     }
 
-    public void SetLastSibling()
+    public virtual void EditMode()
     {
+        pannelState = PannelState.Edit;
+        StopAllCoroutines();
         rect.SetAsLastSibling();
+        rect.SetParent(UIManager.Instance.wallPaper);
+        StartCoroutine(ScaleUp(new Vector2(UIManager.Instance.screenWidth - 100, UIManager.Instance.screenHeight - 560)));
     }
 
-    public void SetParent(RectTransform parent)
+    public void DeEditMode()
     {
-        rect.SetParent(parent);
+        pannelState = PannelState.Small;
+        StopAllCoroutines();
+        rect.SetParent(UIManager.Instance.contentPannel.pannel);
+        StartCoroutine(ScaleDown(size));
     }
 
     public IEnumerator ScaleUp(Vector2 maxSize)

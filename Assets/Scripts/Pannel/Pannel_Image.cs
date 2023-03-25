@@ -51,23 +51,28 @@ public class Pannel_Image : Pannel
         tex.LoadImage(temp);
 
         img.texture = tex;
-        img.SetNativeSize();
-        ImgSizeSet();
+        //img.SetNativeSize();
+        //ImgSizeSet();
     }
 
-    void ImgSizeSet()
+    public override void EditMode()
     {
-        Vector2 imgSize = img.rectTransform.sizeDelta;
-
-        if (imgSize.x < contentRect.sizeDelta.x)
-        {
-            img.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, contentRect.sizeDelta.x);
-            img.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, imgSize.y * (contentRect.sizeDelta.x / imgSize.x));
-        }
-        else if (imgSize.y < contentRect.sizeDelta.y)
-        {
-            img.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, contentRect.sizeDelta.y);
-            img.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, imgSize.x * (contentRect.sizeDelta.y / imgSize.y));
-        }
+        base.EditMode();
     }
+
+    //void ImgSizeSet()
+    //{
+    //    Vector2 imgSize = img.rectTransform.sizeDelta;
+
+    //    if (imgSize.x < contentRect.sizeDelta.x)
+    //    {
+    //        img.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, contentRect.sizeDelta.x);
+    //        img.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, imgSize.y * (contentRect.sizeDelta.x / imgSize.x));
+    //    }
+    //    else if (imgSize.y < contentRect.sizeDelta.y)
+    //    {
+    //        img.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, contentRect.sizeDelta.y);
+    //        img.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, imgSize.x * (contentRect.sizeDelta.y / imgSize.y));
+    //    }
+    //}
 }
