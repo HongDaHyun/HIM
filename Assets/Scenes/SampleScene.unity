@@ -1457,6 +1457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
+  position: {x: 0, y: 0}
   contentRect: {fileID: 118917387}
   pannelState: 0
 --- !u!1 &38721101
@@ -2703,6 +2704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
+  position: {x: 0, y: 0}
   contentRect: {fileID: 674502961}
   pannelState: 0
 --- !u!1 &64003673
@@ -5988,18 +5990,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1564947555}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: ScrollLock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1564947555}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
         m_MethodName: SelectPannel
@@ -29378,18 +29368,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1564947555}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: ScrollLock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1564947555}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
         m_MethodName: SelectPannel
         m_Mode: 2
         m_Arguments:
@@ -30204,6 +30182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
+  position: {x: 0, y: 0}
   contentRect: {fileID: 1740585222}
   pannelState: 0
 --- !u!1 &697760519
@@ -40533,7 +40512,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930919928}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -40574,7 +40553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f7545297fed5ec244a6b9c1d061ddae3, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8879c72a3cb19e64099ba3892082dd06, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -41968,18 +41947,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1564947555}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: ScrollLock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1564947555}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
         m_MethodName: SelectPannel
         m_Mode: 2
         m_Arguments:
@@ -43049,8 +43016,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 60}
-  m_SizeDelta: {x: 0, y: -120}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005699392
 MonoBehaviour:
@@ -47374,6 +47341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
+  position: {x: 0, y: 0}
   contentRect: {fileID: 961695468}
   pannelState: 0
 --- !u!1 &1083595604
@@ -48475,18 +48443,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1564947555}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: ScrollLock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1564947555}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
         m_MethodName: SelectPannel
@@ -79626,18 +79582,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1564947555}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: ScrollLock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1564947555}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
         m_MethodName: SelectPannel
         m_Mode: 2
         m_Arguments:
@@ -84084,6 +84028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
+  position: {x: 0, y: 0}
   contentRect: {fileID: 2075649328}
   pannelState: 0
 --- !u!1 &1850080992
@@ -87398,6 +87343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
+  position: {x: 0, y: 0}
   contentRect: {fileID: 340613143}
   pannelState: 0
   img: {fileID: 930919932}
@@ -96315,18 +96261,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1564947555}
-        m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
-        m_MethodName: ScrollLock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1564947555}
         m_TargetAssemblyTypeName: BtnManager, Assembly-CSharp
         m_MethodName: SelectPannel

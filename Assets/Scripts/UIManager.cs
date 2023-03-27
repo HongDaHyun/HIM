@@ -23,6 +23,14 @@ public class UIManager : Singleton<UIManager>
         SetSize();
     }
 
+    private void Update()
+    {
+        if (popUpPannel.pannel.gameObject.activeSelf)
+            contentPannel.scrollRect.enabled = false;
+        else
+            contentPannel.scrollRect.enabled = true;
+    }
+
     public void NamePannelActive()
     {
         loginPannel.btnPannel.SetActive(false);
@@ -65,6 +73,7 @@ public class UIManager : Singleton<UIManager>
             popUpPannel.mouseImg.transform.SetParent(popUpPannel.btn[2].transform);
             popUpPannel.btn[0].gameObject.SetActive(false);
             popUpPannel.btn[1].gameObject.SetActive(false);
+            popUpPannel.btn[2].gameObject.SetActive(true);
         }
 
         if (popUpPannel.pannel.anchoredPosition.x > halfWidth)

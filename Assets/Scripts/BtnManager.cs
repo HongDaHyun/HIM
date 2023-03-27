@@ -85,14 +85,6 @@ public class BtnManager : Singleton<BtnManager>
         UIManager.Instance.selectPannel.EditMode();
     }
 
-    public void ScrollLock()
-    {
-        if (UIManager.Instance.contentPannel.scrollRect.enabled)
-            UIManager.Instance.contentPannel.scrollRect.enabled = false;
-        else
-            UIManager.Instance.contentPannel.scrollRect.enabled = true;
-    }
-
     public void SetLastSibling(RectTransform rect)
     {
         rect.SetAsLastSibling();

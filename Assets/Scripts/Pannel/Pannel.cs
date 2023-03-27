@@ -6,7 +6,7 @@ public enum PannelState { Small, Edit }
 
 public abstract class Pannel : MonoBehaviour
 {
-    public Vector2 size;
+    public Vector2 size, position;
     public RectTransform contentRect;
     public PannelState pannelState = PannelState.Small;
     RectTransform rect;
@@ -19,6 +19,7 @@ public abstract class Pannel : MonoBehaviour
     private void Start()
     {
         size = rect.sizeDelta;
+        position = rect.anchoredPosition;
     }
 
     public virtual void EditMode()
@@ -26,7 +27,7 @@ public abstract class Pannel : MonoBehaviour
         pannelState = PannelState.Edit;
         StopAllCoroutines();
         rect.SetAsLastSibling();
-        rect.SetParent(UIManager.Instance.wallPaper);
+        rect.anchoredPosition = new Vector2(0, 0);
         StartCoroutine(ScaleUp(new Vector2(UIManager.Instance.screenWidth - 100, UIManager.Instance.screenHeight - 560)));
     }
 
@@ -34,7 +35,7 @@ public abstract class Pannel : MonoBehaviour
     {
         pannelState = PannelState.Small;
         StopAllCoroutines();
-        rect.SetParent(UIManager.Instance.contentPannel.pannel);
+        rect.anchoredPosition = position;
         StartCoroutine(ScaleDown(size));
     }
 
