@@ -251,7 +251,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/user.keystore
+  AndroidKeystoreName: "C:/Users/min35/OneDrive/\uBC14\uD0D5 \uD654\uBA74/Privacy/user.keystore"
   AndroidKeyaliasName: him
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
@@ -759,7 +759,20 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    CloudRendering: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    EmbeddedLinux: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    GameCoreXboxOne: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    Lumin: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    PS4: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    PS5: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    Stadia: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    Standalone: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    WebGL: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    Windows Store Apps: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    XboxOne: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
+    tvOS: TABLELAYOUT_PRESENT;TEXTMESHPRO_PRESENT
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

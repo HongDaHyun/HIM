@@ -110,6 +110,7 @@ public struct ContentPannel
     public ScrollRect scrollRect;
     public RectTransform pannel;
     public ImgPannel img_Pannel;
+    public ProfilePannel profile_Pannel;
 }
 
 [Serializable]
@@ -117,6 +118,18 @@ public struct ImgPannel
 {
     public Pannel pannel;
     public RawImage img;
+}
+
+[Serializable]
+public struct ProfilePannel
+{
+    public Birth birth;
+}
+
+[Serializable]
+public struct Birth
+{
+    public Text yearTxt, monthTxt, dayTxt;
 }
 
 [Serializable]

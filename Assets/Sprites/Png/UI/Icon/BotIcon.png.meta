@@ -132,7 +132,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 0
         width: 48
         height: 48
       alignment: 0
@@ -153,7 +153,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 0
         width: 48
         height: 48
       alignment: 0
@@ -173,7 +173,7 @@ TextureImporter:
       name: BotIcon_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 96
         y: 0
         width: 48
         height: 48
@@ -194,7 +194,7 @@ TextureImporter:
       name: BotIcon_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 144
         y: 0
         width: 48
         height: 48
@@ -211,6 +211,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BotIcon_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a2594f7244041458c8842c338fdad1
+      internalID: -446569146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -222,6 +243,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BotIcon_4: -446569146
       BotIcon_2: 1291904669
       BotIcon_0: 158876649
       BotIcon_1: 1696027931

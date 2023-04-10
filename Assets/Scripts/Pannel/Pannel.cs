@@ -28,7 +28,7 @@ public abstract class Pannel : MonoBehaviour
         StopAllCoroutines();
         rect.SetAsLastSibling();
         rect.anchoredPosition = new Vector2(0, 0);
-        StartCoroutine(ScaleUp(new Vector2(UIManager.Instance.screenWidth - 100, UIManager.Instance.screenHeight - 560)));
+        StartCoroutine(ScaleUp(new Vector2(UIManager.Instance.screenWidth - 80, UIManager.Instance.screenHeight - 860)));
     }
 
     public void DeEditMode()

@@ -89,4 +89,27 @@ public class BtnManager : Singleton<BtnManager>
     {
         rect.SetAsLastSibling();
     }
+
+    public void NextDateBtn(string name)
+    {
+        switch(name)
+        {
+            case "Year":
+                GameManager.Instance.curDate = GameManager.Instance.curDate.AddYears(1);
+                break;
+            case "Month":
+                GameManager.Instance.curDate = GameManager.Instance.curDate.AddMonths(1);
+                break;
+            case "Day":
+                GameManager.Instance.curDate = GameManager.Instance.curDate.AddDays(1);
+                break;
+        }
+    }
+
+    public void UpdateDateTxt()
+    {
+        UIManager.Instance.contentPannel.profile_Pannel.birth.yearTxt.text = GameManager.Instance.curDate.Year.ToString() + "³â";
+        UIManager.Instance.contentPannel.profile_Pannel.birth.monthTxt.text = GameManager.Instance.curDate.Month.ToString("00") + "¿ù";
+        UIManager.Instance.contentPannel.profile_Pannel.birth.dayTxt.text = GameManager.Instance.curDate.Day.ToString("00") + "ÀÏ";
+    }
 }
