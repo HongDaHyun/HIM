@@ -135,7 +135,9 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 6750397296838057923, guid: e408a531f6922a44888a33f92a693e39, type: 2}
+  - {fileID: 11400000, guid: da4ba5f9536359543bbc42db7aa09aa9, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -251,7 +253,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: "C:/Users/min35/OneDrive/\uBC14\uD0D5 \uD654\uBA74/Privacy/user.keystore"
+  AndroidKeystoreName: D:/user.keystore
   AndroidKeyaliasName: him
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
